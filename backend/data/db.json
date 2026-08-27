@@ -1,0 +1,221 @@
+{
+  "products": [
+    {
+      "id": "p-cake-choc",
+      "name": "Chocolate Fudge Cake",
+      "category": "cake",
+      "description": "Rich Belgian chocolate layers with silky ganache.",
+      "price": 650,
+      "unit": "whole",
+      "stock": 9,
+      "active": true
+    },
+    {
+      "id": "p-cake-redvelvet",
+      "name": "Red Velvet Cake",
+      "category": "cake",
+      "description": "Classic red velvet with cream cheese frosting.",
+      "price": 720,
+      "unit": "whole",
+      "stock": 8,
+      "active": true
+    },
+    {
+      "id": "p-cake-blueberry",
+      "name": "Blueberry Cheesecake",
+      "category": "cake",
+      "description": "Baked cheesecake topped with fresh blueberries.",
+      "price": 780,
+      "unit": "whole",
+      "stock": 6,
+      "active": true
+    },
+    {
+      "id": "p-cake-slice",
+      "name": "Cake Slice (Any Flavour)",
+      "category": "cake",
+      "description": "Single generous slice of our signature cakes.",
+      "price": 95,
+      "unit": "slice",
+      "stock": 40,
+      "active": true
+    },
+    {
+      "id": "p-bread-sourdough",
+      "name": "Sourdough Loaf",
+      "category": "bread",
+      "description": "Slow-fermented, crusty artisan sourdough.",
+      "price": 120,
+      "unit": "loaf",
+      "stock": 15,
+      "active": true
+    },
+    {
+      "id": "p-bread-brioche",
+      "name": "Butter Brioche",
+      "category": "bread",
+      "description": "Soft, golden, buttery brioche loaf.",
+      "price": 110,
+      "unit": "loaf",
+      "stock": 12,
+      "active": true
+    },
+    {
+      "id": "p-pastry-croissant",
+      "name": "Butter Croissant",
+      "category": "pastry",
+      "description": "Flaky, airy, all-butter croissant.",
+      "price": 60,
+      "unit": "piece",
+      "stock": 30,
+      "active": true
+    },
+    {
+      "id": "p-pastry-pandan",
+      "name": "Pandan Custard Bun",
+      "category": "pastry",
+      "description": "Soft bun filled with pandan custard.",
+      "price": 45,
+      "unit": "piece",
+      "stock": 25,
+      "active": true
+    },
+    {
+      "id": "p-savory-thai",
+      "name": "Thai Basil Pork Pie",
+      "category": "savory",
+      "description": "Homestyle pie with Thai basil pork filling.",
+      "price": 85,
+      "unit": "piece",
+      "stock": 18,
+      "active": true
+    },
+    {
+      "id": "p-savory-sandwich",
+      "name": "Chicken Sandwich",
+      "category": "savory",
+      "description": "Fresh chicken sandwich with house mayo.",
+      "price": 90,
+      "unit": "piece",
+      "stock": 15,
+      "active": true
+    }
+  ],
+  "inventory": [
+    {
+      "id": "inv-flour",
+      "name": "Flour",
+      "unit": "kg",
+      "qty": 50,
+      "costPerUnit": 40
+    },
+    {
+      "id": "inv-butter",
+      "name": "Butter",
+      "unit": "kg",
+      "qty": 20,
+      "costPerUnit": 260
+    },
+    {
+      "id": "inv-sugar",
+      "name": "Sugar",
+      "unit": "kg",
+      "qty": 30,
+      "costPerUnit": 35
+    },
+    {
+      "id": "inv-eggs",
+      "name": "Eggs",
+      "unit": "dozen",
+      "qty": 40,
+      "costPerUnit": 95
+    },
+    {
+      "id": "inv-choc",
+      "name": "Chocolate",
+      "unit": "kg",
+      "qty": 12,
+      "costPerUnit": 380
+    },
+    {
+      "id": "inv-cream",
+      "name": "Fresh Cream",
+      "unit": "litre",
+      "qty": 25,
+      "costPerUnit": 120
+    },
+    {
+      "id": "inv-fruit",
+      "name": "Fresh Fruit",
+      "unit": "kg",
+      "qty": 15,
+      "costPerUnit": 90
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-MTBRA9MT",
+      "number": 1,
+      "customer": {
+        "name": "Sample Order",
+        "phone": "080-000-0000"
+      },
+      "items": [
+        {
+          "productId": "p-cake-choc",
+          "name": "Chocolate Fudge Cake",
+          "qty": 1,
+          "unitPrice": 650
+        }
+      ],
+      "subtotal": 650,
+      "deliveryFee": 50,
+      "total": 700,
+      "paymentMethod": "cash",
+      "status": "completed",
+      "createdAt": "2026-08-27T16:47:34.469Z"
+    },
+    {
+      "id": "ORD-mtbraceh-yv3hl",
+      "number": 2,
+      "customer": {
+        "name": "Test",
+        "phone": "081-111-2222",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "p-cake-choc",
+          "name": "Chocolate Fudge Cake",
+          "qty": 1,
+          "unitPrice": 650
+        }
+      ],
+      "subtotal": 650,
+      "deliveryFee": 0,
+      "total": 650,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-27T16:47:38.057Z"
+    }
+  ],
+  "purchases": [],
+  "ledger": [
+    {
+      "id": "LMTBRA9PQ",
+      "type": "order",
+      "amount": 700,
+      "note": "Order #1 - Chocolate Fudge Cake",
+      "refId": "ORD-MTBRA9MT",
+      "createdAt": "2026-08-27T16:47:34.574Z"
+    },
+    {
+      "id": "LMTBRACEH",
+      "type": "order",
+      "amount": 650,
+      "note": "Order #2 - Test",
+      "refId": "ORD-mtbraceh-yv3hl",
+      "createdAt": "2026-08-27T16:47:38.057Z"
+    }
+  ]
+}
