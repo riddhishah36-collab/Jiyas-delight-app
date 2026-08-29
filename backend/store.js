@@ -122,7 +122,16 @@ const DEFAULT_DB = {
   ],
   orders: [],
   purchases: [],
-  ledger: []
+  ledger: [],
+  staff: [
+    { id: 'st-jiya', name: 'Jiya (Owner)', role: 'owner', phone: '081-000-0001', color: '#e64d85' },
+    { id: 'st-anong', name: 'Anong', role: 'baker', phone: '081-000-0002', color: '#4ecdc4' },
+    { id: 'st-somchai', name: 'Somchai', role: 'delivery', phone: '081-000-0003', color: '#ffb03b' },
+    { id: 'st-malee', name: 'Malee', role: 'counter', phone: '081-000-0004', color: '#8e7cc3' }
+  ],
+  tasks: [],
+  futureOrders: [],
+  notifications: []
 };
 
 function now() {
@@ -147,6 +156,10 @@ export class Store {
         this.db.ledger = this.db.ledger || [];
         this.db.products = this.db.products || [];
         this.db.inventory = this.db.inventory || [];
+        this.db.staff = this.db.staff || [];
+        this.db.tasks = this.db.tasks || [];
+        this.db.futureOrders = this.db.futureOrders || [];
+        this.db.notifications = this.db.notifications || [];
         return;
       } catch (e) {
         console.error('Data file corrupt, creating backup and starting fresh', e);
@@ -160,6 +173,9 @@ export class Store {
   }
 
   seed() {
+    if (this.db.staff.length === 0) {
+      this.db.staff = JSON.parse(JSON.stringify(DEFAULT_DB.staff));
+    }
     if (this.db.orders.length > 0) return;
     const sample = {
       id: 'ORD-' + Date.now().toString(36).toUpperCase(),
@@ -180,6 +196,25 @@ export class Store {
 
   addLedger(type, amount, note, refId) {
     this.db.ledger.push({ id: 'L' + Date.now().toString(36).toUpperCase(), type, amount, note, refId, createdAt: now() });
+  }
+
+  notify(type, message, refId = null, assigneeId = null) {
+    this.db.notifications.push({
+      id: 'N' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).slice(2, 5),
+      type,
+      message,
+      refId,
+      assigneeId,
+      read: false,
+      createdAt: now()
+    });
+  }
+
+  reminderFor(orderId) {
+    const fo = this.db.futureOrders.find((f) => f.id === orderId);
+    if (!fo || fo.reminded) return;
+    fo.reminded = true;
+    this.notify('reminder', `Reminder: "${fo.title}" due ${new Date(fo.dueAt).toLocaleString()}. Start preparing!`, fo.id);
   }
 
   save(initial = false) {
@@ -203,7 +238,7 @@ export class Store {
     const messages = this.gitQueue.splice(0, this.gitQueue.length);
     if (messages.length === 0) return;
     const message = messages[0] + (messages.length > 1 ? ' (+' + (messages.length - 1) + ' more)' : '');
-    const args = ['add', 'backend/data/db.json', '--'];
+    const args = ['add', 'backend/data/db.json', 'backend/uploads', '--'];
     execFile('git', args, { cwd: REPO_ROOT }, (err) => {
       if (err) return;
       execFile('git', ['commit', '-m', '[auto-save] ' + message], { cwd: REPO_ROOT }, (err) => {
