@@ -224,6 +224,13 @@ app.get('/api/admin/ledger', authAdmin, (req, res) => {
   respond(() => res.json(store.db.ledger), res);
 });
 
+app.get('/api/admin/orders', authAdmin, (req, res) => {
+  respond(() => {
+    const list = [...store.db.orders].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    res.json(list);
+  }, res);
+});
+
 app.put('/api/admin/orders/:id', authAdmin, (req, res) => {
   respond(() => {
     const order = store.db.orders.find((o) => o.id === req.params.id);
