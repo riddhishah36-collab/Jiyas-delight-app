@@ -218,7 +218,7 @@
       "deliveryFee": 50,
       "total": 1490,
       "paymentMethod": "promptpay",
-      "status": "pending",
+      "status": "preparing",
       "createdAt": "2026-08-29T15:59:32.954Z"
     },
     {
