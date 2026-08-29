@@ -37,7 +37,7 @@
       "description": "Single generous slice of our signature cakes.",
       "price": 95,
       "unit": "slice",
-      "stock": 40,
+      "stock": 37,
       "active": true
     },
     {
@@ -146,7 +146,7 @@
       "id": "inv-flour",
       "name": "Flour",
       "unit": "kg",
-      "qty": 128,
+      "qty": 133,
       "costPerUnit": 40
     },
     {
@@ -549,6 +549,33 @@
       "photos": [
         "/uploads/photo-1788020130808-209341.jpg"
       ]
+    },
+    {
+      "id": "ORD-mtel21k0-nh7uk",
+      "number": 16,
+      "customer": {
+        "name": "Final Test",
+        "phone": "087-222-3333",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "p-cake-slice",
+          "name": "Cake Slice (Any Flavour)",
+          "qty": 3,
+          "unitPrice": 95
+        }
+      ],
+      "subtotal": 285,
+      "deliveryFee": 0,
+      "total": 285,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:16:31.584Z",
+      "assigneeId": "st-malee",
+      "photos": [
+        "/uploads/photo-1788020191227-800790.jpg"
+      ]
     }
   ],
   "purchases": [
@@ -651,6 +678,16 @@
       "totalCost": -120,
       "type": "sell",
       "createdAt": "2026-08-29T16:04:11.095Z"
+    },
+    {
+      "id": "PUR-mtel21pn-uc7cg",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": 5,
+      "costPerUnit": 40,
+      "totalCost": 200,
+      "type": "buy",
+      "createdAt": "2026-08-29T16:16:31.787Z"
     }
   ],
   "ledger": [
@@ -853,6 +890,22 @@
       "note": "Order #15 - Cust C",
       "refId": "ORD-mtel0qr9-j4h9a",
       "createdAt": "2026-08-29T16:15:30.933Z"
+    },
+    {
+      "id": "LMTEL21K0",
+      "type": "order",
+      "amount": 285,
+      "note": "Order #16 - Final Test",
+      "refId": "ORD-mtel21k0-nh7uk",
+      "createdAt": "2026-08-29T16:16:31.584Z"
+    },
+    {
+      "id": "LMTEL21PO",
+      "type": "purchase",
+      "amount": 200,
+      "note": "Bought Flour",
+      "refId": "PUR-mtel21pn-uc7cg",
+      "createdAt": "2026-08-29T16:16:31.788Z"
     }
   ],
   "staff": [
@@ -912,6 +965,16 @@
       "photos": [],
       "dueAt": "2026-09-02T06:00:00.000Z",
       "createdAt": "2026-08-29T16:14:55.723Z"
+    },
+    {
+      "id": "T-mtel210t-j1z57",
+      "title": "Prep 5kg dough",
+      "description": "",
+      "assigneeId": "st-somchai",
+      "status": "done",
+      "photos": [],
+      "dueAt": "2026-09-03T04:00:00.000Z",
+      "createdAt": "2026-08-29T16:16:30.893Z"
     }
   ],
   "futureOrders": [
@@ -936,6 +999,17 @@
       "status": "preparing",
       "reminded": false,
       "createdAt": "2026-08-29T16:14:55.951Z"
+    },
+    {
+      "id": "FO-mtel215e-li4el",
+      "title": "Bulk order 50 croissants",
+      "customerName": "Cafe Siam",
+      "dueAt": "2026-09-08T07:00:00.000Z",
+      "notes": "",
+      "assigneeId": "st-jiya",
+      "status": "preparing",
+      "reminded": false,
+      "createdAt": "2026-08-29T16:16:31.058Z"
     }
   ],
   "notifications": [
@@ -1037,6 +1111,60 @@
       "assigneeId": null,
       "read": false,
       "createdAt": "2026-08-29T16:15:30.933Z"
+    },
+    {
+      "id": "NMTEL210Tk0w",
+      "type": "task",
+      "message": "New task assigned: \"Prep 5kg dough\" to Anong",
+      "refId": "T-mtel210t-j1z57",
+      "assigneeId": "st-anong",
+      "read": false,
+      "createdAt": "2026-08-29T16:16:30.893Z"
+    },
+    {
+      "id": "NMTEL211Nccy",
+      "type": "task",
+      "message": "Task \"Prep 5kg dough\" is in_progress. (Somchai)",
+      "refId": "T-mtel210t-j1z57",
+      "assigneeId": "st-somchai",
+      "read": false,
+      "createdAt": "2026-08-29T16:16:30.923Z"
+    },
+    {
+      "id": "NMTEL213Ayuf",
+      "type": "task",
+      "message": "Task \"Prep 5kg dough\" is done. (Somchai)",
+      "refId": "T-mtel210t-j1z57",
+      "assigneeId": "st-somchai",
+      "read": false,
+      "createdAt": "2026-08-29T16:16:30.982Z"
+    },
+    {
+      "id": "NMTEL216Wq7y",
+      "type": "future",
+      "message": "Future order scheduled: \"Bulk order 50 croissants\" for 9/8/2026, 7:00:00 AM.",
+      "refId": "FO-mtel215e-li4el",
+      "assigneeId": "st-jiya",
+      "read": false,
+      "createdAt": "2026-08-29T16:16:31.112Z"
+    },
+    {
+      "id": "NMTEL217Y356",
+      "type": "future",
+      "message": "Future order \"Bulk order 50 croissants\" marked preparing.",
+      "refId": "FO-mtel215e-li4el",
+      "assigneeId": "st-jiya",
+      "read": false,
+      "createdAt": "2026-08-29T16:16:31.150Z"
+    },
+    {
+      "id": "NMTEL21K0ssg",
+      "type": "order",
+      "message": "New order #16 from Final Test. 1 item(s), 285 THB. Start preparing!",
+      "refId": "ORD-mtel21k0-nh7uk",
+      "assigneeId": null,
+      "read": false,
+      "createdAt": "2026-08-29T16:16:31.584Z"
     }
   ]
 }
