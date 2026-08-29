@@ -650,7 +650,7 @@ function InventoryRow({ item, onUpdate }) {
 function App() {
   const [products, setProducts] = useState([]);
   const [view, setView] = useState('home');
-  const [cartState, setCartState] = useCart();
+  const cartState = useCart();
   const [checkoutInfo, setCheckoutInfo] = useState(null);
 
   useEffect(() => {
@@ -663,7 +663,7 @@ function App() {
   };
 
   const doneOrder = () => {
-    setCartState.clear();
+    cartState.clear();
     setCheckoutInfo(null);
     setView('home');
   };

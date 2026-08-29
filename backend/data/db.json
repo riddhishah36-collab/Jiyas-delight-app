@@ -7,7 +7,7 @@
       "description": "Rich Belgian chocolate layers with silky ganache.",
       "price": 650,
       "unit": "whole",
-      "stock": 6,
+      "stock": 5,
       "active": true
     },
     {
@@ -129,6 +129,16 @@
       "stock": 0,
       "active": true,
       "name": "Test Bun"
+    },
+    {
+      "id": "p-mtekm660-h94v6",
+      "category": "pastry",
+      "description": "",
+      "price": 40,
+      "unit": "piece",
+      "stock": 0,
+      "active": true,
+      "name": "Test Bun"
     }
   ],
   "inventory": [
@@ -136,7 +146,7 @@
       "id": "inv-flour",
       "name": "Flour",
       "unit": "kg",
-      "qty": 121,
+      "qty": 128,
       "costPerUnit": 40
     },
     {
@@ -415,6 +425,53 @@
       "paymentMethod": "cash",
       "status": "pending",
       "createdAt": "2026-08-29T16:04:01.092Z"
+    },
+    {
+      "id": "ORD-mtekm5yp-u3u86",
+      "number": 11,
+      "customer": {
+        "name": "Tester",
+        "phone": "089-111-2222",
+        "address": "Bangkok"
+      },
+      "items": [
+        {
+          "productId": "p-cake-choc",
+          "name": "Chocolate Fudge Cake",
+          "qty": 1,
+          "unitPrice": 650
+        }
+      ],
+      "subtotal": 650,
+      "deliveryFee": 50,
+      "total": 700,
+      "paymentMethod": "promptpay",
+      "status": "completed",
+      "createdAt": "2026-08-29T16:04:10.801Z"
+    },
+    {
+      "id": "ORD-mtekm629-wzouo",
+      "number": 12,
+      "customer": {
+        "name": "Y",
+        "phone": "081",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "custom-cake",
+          "name": "Custom Cake (large) - Mango",
+          "qty": 1,
+          "unitPrice": 1400,
+          "detail": "Message: Hi"
+        }
+      ],
+      "subtotal": 1400,
+      "deliveryFee": 0,
+      "total": 1400,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:04:10.929Z"
     }
   ],
   "purchases": [
@@ -497,6 +554,26 @@
       "totalCost": -120,
       "type": "sell",
       "createdAt": "2026-08-29T16:04:01.263Z"
+    },
+    {
+      "id": "PUR-mtekm66g-93mm9",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": 10,
+      "costPerUnit": 40,
+      "totalCost": 400,
+      "type": "buy",
+      "createdAt": "2026-08-29T16:04:11.080Z"
+    },
+    {
+      "id": "PUR-mtekm66v-vioz6",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": -3,
+      "costPerUnit": 40,
+      "totalCost": -120,
+      "type": "sell",
+      "createdAt": "2026-08-29T16:04:11.095Z"
     }
   ],
   "ledger": [
@@ -643,6 +720,38 @@
       "note": "Sold Flour",
       "refId": "PUR-mteklylr-rl3gp",
       "createdAt": "2026-08-29T16:04:01.263Z"
+    },
+    {
+      "id": "LMTEKM5YP",
+      "type": "order",
+      "amount": 700,
+      "note": "Order #11 - Tester",
+      "refId": "ORD-mtekm5yp-u3u86",
+      "createdAt": "2026-08-29T16:04:10.801Z"
+    },
+    {
+      "id": "LMTEKM629",
+      "type": "order",
+      "amount": 1400,
+      "note": "Order #12 - Y",
+      "refId": "ORD-mtekm629-wzouo",
+      "createdAt": "2026-08-29T16:04:10.929Z"
+    },
+    {
+      "id": "LMTEKM66G",
+      "type": "purchase",
+      "amount": 400,
+      "note": "Bought Flour",
+      "refId": "PUR-mtekm66g-93mm9",
+      "createdAt": "2026-08-29T16:04:11.080Z"
+    },
+    {
+      "id": "LMTEKM66V",
+      "type": "sale",
+      "amount": 120,
+      "note": "Sold Flour",
+      "refId": "PUR-mtekm66v-vioz6",
+      "createdAt": "2026-08-29T16:04:11.095Z"
     }
   ]
 }
