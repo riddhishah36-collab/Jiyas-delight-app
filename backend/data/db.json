@@ -7,7 +7,7 @@
       "description": "Rich Belgian chocolate layers with silky ganache.",
       "price": 650,
       "unit": "whole",
-      "stock": 8,
+      "stock": 6,
       "active": true
     },
     {
@@ -109,6 +109,26 @@
       "stock": 0,
       "active": true,
       "name": "Test Bun"
+    },
+    {
+      "id": "p-mteklvcq-8f6jv",
+      "category": "pastry",
+      "description": "",
+      "price": 40,
+      "unit": "piece",
+      "stock": 0,
+      "active": true,
+      "name": "Test Bun"
+    },
+    {
+      "id": "p-mteklykw-xuuf1",
+      "category": "pastry",
+      "description": "",
+      "price": 40,
+      "unit": "piece",
+      "stock": 0,
+      "active": true,
+      "name": "Test Bun"
     }
   ],
   "inventory": [
@@ -116,7 +136,7 @@
       "id": "inv-flour",
       "name": "Flour",
       "unit": "kg",
-      "qty": 107,
+      "qty": 121,
       "costPerUnit": 40
     },
     {
@@ -301,6 +321,100 @@
       "paymentMethod": "cash",
       "status": "pending",
       "createdAt": "2026-08-29T16:01:36.689Z"
+    },
+    {
+      "id": "ORD-mteklv5d-oecuq",
+      "number": 7,
+      "customer": {
+        "name": "Tester",
+        "phone": "089-111-2222",
+        "address": "Bangkok"
+      },
+      "items": [
+        {
+          "productId": "p-cake-choc",
+          "name": "Chocolate Fudge Cake",
+          "qty": 1,
+          "unitPrice": 650
+        }
+      ],
+      "subtotal": 650,
+      "deliveryFee": 50,
+      "total": 700,
+      "paymentMethod": "promptpay",
+      "status": "completed",
+      "createdAt": "2026-08-29T16:03:56.786Z"
+    },
+    {
+      "id": "ORD-mteklv8x-45o4x",
+      "number": 8,
+      "customer": {
+        "name": "Y",
+        "phone": "081",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "custom-cake",
+          "name": "Custom Cake (large) - Mango",
+          "qty": 1,
+          "unitPrice": 1400,
+          "detail": "Message: Hi"
+        }
+      ],
+      "subtotal": 1400,
+      "deliveryFee": 0,
+      "total": 1400,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:03:56.913Z"
+    },
+    {
+      "id": "ORD-mteklydf-w3901",
+      "number": 9,
+      "customer": {
+        "name": "Tester",
+        "phone": "089-111-2222",
+        "address": "Bangkok"
+      },
+      "items": [
+        {
+          "productId": "p-cake-choc",
+          "name": "Chocolate Fudge Cake",
+          "qty": 1,
+          "unitPrice": 650
+        }
+      ],
+      "subtotal": 650,
+      "deliveryFee": 50,
+      "total": 700,
+      "paymentMethod": "promptpay",
+      "status": "completed",
+      "createdAt": "2026-08-29T16:04:00.963Z"
+    },
+    {
+      "id": "ORD-mteklyh0-7llqs",
+      "number": 10,
+      "customer": {
+        "name": "Y",
+        "phone": "081",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "custom-cake",
+          "name": "Custom Cake (large) - Mango",
+          "qty": 1,
+          "unitPrice": 1400,
+          "detail": "Message: Hi"
+        }
+      ],
+      "subtotal": 1400,
+      "deliveryFee": 0,
+      "total": 1400,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:04:01.092Z"
     }
   ],
   "purchases": [
@@ -343,6 +457,46 @@
       "totalCost": -120,
       "type": "sell",
       "createdAt": "2026-08-29T16:01:36.859Z"
+    },
+    {
+      "id": "PUR-mteklvd5-pi363",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": 10,
+      "costPerUnit": 40,
+      "totalCost": 400,
+      "type": "buy",
+      "createdAt": "2026-08-29T16:03:57.065Z"
+    },
+    {
+      "id": "PUR-mteklvdm-ivlhz",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": -3,
+      "costPerUnit": 40,
+      "totalCost": -120,
+      "type": "sell",
+      "createdAt": "2026-08-29T16:03:57.082Z"
+    },
+    {
+      "id": "PUR-mteklylc-ebmt1",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": 10,
+      "costPerUnit": 40,
+      "totalCost": 400,
+      "type": "buy",
+      "createdAt": "2026-08-29T16:04:01.248Z"
+    },
+    {
+      "id": "PUR-mteklylr-rl3gp",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": -3,
+      "costPerUnit": 40,
+      "totalCost": -120,
+      "type": "sell",
+      "createdAt": "2026-08-29T16:04:01.263Z"
     }
   ],
   "ledger": [
@@ -425,6 +579,70 @@
       "note": "Sold Flour",
       "refId": "PUR-mtekiv6j-e4fs5",
       "createdAt": "2026-08-29T16:01:36.859Z"
+    },
+    {
+      "id": "LMTEKLV5E",
+      "type": "order",
+      "amount": 700,
+      "note": "Order #7 - Tester",
+      "refId": "ORD-mteklv5d-oecuq",
+      "createdAt": "2026-08-29T16:03:56.786Z"
+    },
+    {
+      "id": "LMTEKLV8X",
+      "type": "order",
+      "amount": 1400,
+      "note": "Order #8 - Y",
+      "refId": "ORD-mteklv8x-45o4x",
+      "createdAt": "2026-08-29T16:03:56.913Z"
+    },
+    {
+      "id": "LMTEKLVD5",
+      "type": "purchase",
+      "amount": 400,
+      "note": "Bought Flour",
+      "refId": "PUR-mteklvd5-pi363",
+      "createdAt": "2026-08-29T16:03:57.065Z"
+    },
+    {
+      "id": "LMTEKLVDM",
+      "type": "sale",
+      "amount": 120,
+      "note": "Sold Flour",
+      "refId": "PUR-mteklvdm-ivlhz",
+      "createdAt": "2026-08-29T16:03:57.082Z"
+    },
+    {
+      "id": "LMTEKLYDF",
+      "type": "order",
+      "amount": 700,
+      "note": "Order #9 - Tester",
+      "refId": "ORD-mteklydf-w3901",
+      "createdAt": "2026-08-29T16:04:00.963Z"
+    },
+    {
+      "id": "LMTEKLYH0",
+      "type": "order",
+      "amount": 1400,
+      "note": "Order #10 - Y",
+      "refId": "ORD-mteklyh0-7llqs",
+      "createdAt": "2026-08-29T16:04:01.092Z"
+    },
+    {
+      "id": "LMTEKLYLC",
+      "type": "purchase",
+      "amount": 400,
+      "note": "Bought Flour",
+      "refId": "PUR-mteklylc-ebmt1",
+      "createdAt": "2026-08-29T16:04:01.248Z"
+    },
+    {
+      "id": "LMTEKLYLR",
+      "type": "sale",
+      "amount": 120,
+      "note": "Sold Flour",
+      "refId": "PUR-mteklylr-rl3gp",
+      "createdAt": "2026-08-29T16:04:01.263Z"
     }
   ]
 }
