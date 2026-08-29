@@ -27,7 +27,7 @@
       "description": "Baked cheesecake topped with fresh blueberries.",
       "price": 780,
       "unit": "whole",
-      "stock": 6,
+      "stock": 5,
       "active": true
     },
     {
@@ -472,6 +472,32 @@
       "paymentMethod": "cash",
       "status": "pending",
       "createdAt": "2026-08-29T16:04:10.929Z"
+    },
+    {
+      "id": "ORD-mtel004o-6kyl5",
+      "number": 13,
+      "customer": {
+        "name": "Customer A",
+        "phone": "089-777-6666",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "p-cake-blueberry",
+          "name": "Blueberry Cheesecake",
+          "qty": 1,
+          "unitPrice": 780
+        }
+      ],
+      "subtotal": 780,
+      "deliveryFee": 0,
+      "total": 780,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:14:56.424Z",
+      "photos": [
+        "/uploads/photo-1788020096327-393761.jpg"
+      ]
     }
   ],
   "purchases": [
@@ -752,9 +778,53 @@
       "note": "Sold Flour",
       "refId": "PUR-mtekm66v-vioz6",
       "createdAt": "2026-08-29T16:04:11.095Z"
+    },
+    {
+      "id": "LMTEL004O",
+      "type": "order",
+      "amount": 780,
+      "note": "Order #13 - Customer A",
+      "refId": "ORD-mtel004o-6kyl5",
+      "createdAt": "2026-08-29T16:14:56.424Z"
     }
   ],
-  "staff": [],
+  "staff": [
+    {
+      "id": "st-jiya",
+      "name": "Jiya (Owner)",
+      "role": "owner",
+      "phone": "081-000-0001",
+      "color": "#e64d85"
+    },
+    {
+      "id": "st-anong",
+      "name": "Anong",
+      "role": "baker",
+      "phone": "081-000-0002",
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "st-somchai",
+      "name": "Somchai",
+      "role": "delivery",
+      "phone": "081-000-0003",
+      "color": "#ffb03b"
+    },
+    {
+      "id": "st-malee",
+      "name": "Malee",
+      "role": "counter",
+      "phone": "081-000-0004",
+      "color": "#8e7cc3"
+    },
+    {
+      "id": "st-mtekzzit-zbnvp",
+      "name": "Prasert",
+      "role": "baker",
+      "phone": "080-123-4567",
+      "color": "#b62277"
+    }
+  ],
   "tasks": [
     {
       "id": "T-mtekvss5-g7jy0",
@@ -765,6 +835,16 @@
       "photos": [],
       "dueAt": "2026-09-01T10:00:00.000Z",
       "createdAt": "2026-08-29T16:11:40.277Z"
+    },
+    {
+      "id": "T-mtekzzl7-t7pua",
+      "title": "Bake 20 brioche",
+      "description": "for morning rush",
+      "assigneeId": "st-anong",
+      "status": "done",
+      "photos": [],
+      "dueAt": "2026-09-02T06:00:00.000Z",
+      "createdAt": "2026-08-29T16:14:55.723Z"
     }
   ],
   "futureOrders": [
@@ -778,6 +858,17 @@
       "status": "scheduled",
       "reminded": false,
       "createdAt": "2026-08-29T16:11:40.324Z"
+    },
+    {
+      "id": "FO-mtekzzrj-01aq0",
+      "title": "Birthday cake - Mango",
+      "customerName": "Kanya",
+      "dueAt": "2026-09-10T15:00:00.000Z",
+      "notes": "2 tier, write Happy Birthday",
+      "assigneeId": "st-jiya",
+      "status": "preparing",
+      "reminded": false,
+      "createdAt": "2026-08-29T16:14:55.951Z"
     }
   ],
   "notifications": [
@@ -787,7 +878,7 @@
       "message": "New task assigned: \"Bake 10 croissants\"",
       "refId": "T-mtekvss5-g7jy0",
       "assigneeId": "st-anong",
-      "read": false,
+      "read": true,
       "createdAt": "2026-08-29T16:11:40.281Z"
     },
     {
@@ -796,8 +887,71 @@
       "message": "Future order scheduled: \"Wedding cake for Nok\" for 9/5/2026, 2:00:00 PM.",
       "refId": "FO-mtekvstg-wc0a3",
       "assigneeId": "st-jiya",
-      "read": false,
+      "read": true,
       "createdAt": "2026-08-29T16:11:40.375Z"
+    },
+    {
+      "id": "NMTEKZZITqhd",
+      "type": "staff",
+      "message": "New staff member added: Prasert (baker)",
+      "refId": "st-mtekzzit-zbnvp",
+      "assigneeId": null,
+      "read": true,
+      "createdAt": "2026-08-29T16:14:55.637Z"
+    },
+    {
+      "id": "NMTEKZZL7y25",
+      "type": "task",
+      "message": "New task assigned: \"Bake 20 brioche\" to Anong",
+      "refId": "T-mtekzzl7-t7pua",
+      "assigneeId": "st-anong",
+      "read": true,
+      "createdAt": "2026-08-29T16:14:55.723Z"
+    },
+    {
+      "id": "NMTEKZZNEpbz",
+      "type": "task",
+      "message": "Task \"Bake 20 brioche\" is in_progress. (Anong)",
+      "refId": "T-mtekzzl7-t7pua",
+      "assigneeId": "st-anong",
+      "read": true,
+      "createdAt": "2026-08-29T16:14:55.802Z"
+    },
+    {
+      "id": "NMTEKZZP08ti",
+      "type": "task",
+      "message": "Task \"Bake 20 brioche\" is done. (Anong)",
+      "refId": "T-mtekzzl7-t7pua",
+      "assigneeId": "st-anong",
+      "read": true,
+      "createdAt": "2026-08-29T16:14:55.860Z"
+    },
+    {
+      "id": "NMTEKZZTJd0h",
+      "type": "future",
+      "message": "Future order scheduled: \"Birthday cake - Mango\" for 9/10/2026, 3:00:00 PM.",
+      "refId": "FO-mtekzzrj-01aq0",
+      "assigneeId": "st-jiya",
+      "read": true,
+      "createdAt": "2026-08-29T16:14:56.023Z"
+    },
+    {
+      "id": "NMTEKZZVKofg",
+      "type": "future",
+      "message": "Future order \"Birthday cake - Mango\" marked preparing.",
+      "refId": "FO-mtekzzrj-01aq0",
+      "assigneeId": "st-jiya",
+      "read": true,
+      "createdAt": "2026-08-29T16:14:56.096Z"
+    },
+    {
+      "id": "NMTEL004Ocd4",
+      "type": "order",
+      "message": "New order #13 from Customer A. 1 item(s), 780 THB. Start preparing!",
+      "refId": "ORD-mtel004o-6kyl5",
+      "assigneeId": null,
+      "read": false,
+      "createdAt": "2026-08-29T16:14:56.424Z"
     }
   ]
 }
