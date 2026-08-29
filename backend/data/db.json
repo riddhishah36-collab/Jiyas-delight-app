@@ -753,5 +753,51 @@
       "refId": "PUR-mtekm66v-vioz6",
       "createdAt": "2026-08-29T16:04:11.095Z"
     }
+  ],
+  "staff": [],
+  "tasks": [
+    {
+      "id": "T-mtekvss5-g7jy0",
+      "title": "Bake 10 croissants",
+      "description": "",
+      "assigneeId": "st-anong",
+      "status": "pending",
+      "photos": [],
+      "dueAt": "2026-09-01T10:00:00.000Z",
+      "createdAt": "2026-08-29T16:11:40.277Z"
+    }
+  ],
+  "futureOrders": [
+    {
+      "id": "FO-mtekvstg-wc0a3",
+      "title": "Wedding cake for Nok",
+      "customerName": "Nok",
+      "dueAt": "2026-09-05T14:00:00.000Z",
+      "notes": "",
+      "assigneeId": "st-jiya",
+      "status": "scheduled",
+      "reminded": false,
+      "createdAt": "2026-08-29T16:11:40.324Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NMTEKVSS9qth",
+      "type": "task",
+      "message": "New task assigned: \"Bake 10 croissants\"",
+      "refId": "T-mtekvss5-g7jy0",
+      "assigneeId": "st-anong",
+      "read": false,
+      "createdAt": "2026-08-29T16:11:40.281Z"
+    },
+    {
+      "id": "NMTEKVSUV6py",
+      "type": "future",
+      "message": "Future order scheduled: \"Wedding cake for Nok\" for 9/5/2026, 2:00:00 PM.",
+      "refId": "FO-mtekvstg-wc0a3",
+      "assigneeId": "st-jiya",
+      "read": false,
+      "createdAt": "2026-08-29T16:11:40.375Z"
+    }
   ]
 }
