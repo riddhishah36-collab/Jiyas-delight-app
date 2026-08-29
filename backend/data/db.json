@@ -67,7 +67,7 @@
       "description": "Flaky, airy, all-butter croissant.",
       "price": 60,
       "unit": "piece",
-      "stock": 30,
+      "stock": 28,
       "active": true
     },
     {
@@ -522,6 +522,33 @@
       "status": "pending",
       "createdAt": "2026-08-29T16:15:22.191Z",
       "assigneeId": "st-malee"
+    },
+    {
+      "id": "ORD-mtel0qr9-j4h9a",
+      "number": 15,
+      "customer": {
+        "name": "Cust C",
+        "phone": "088-111-0000",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "p-pastry-croissant",
+          "name": "Butter Croissant",
+          "qty": 2,
+          "unitPrice": 60
+        }
+      ],
+      "subtotal": 120,
+      "deliveryFee": 0,
+      "total": 120,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:15:30.933Z",
+      "assigneeId": "st-malee",
+      "photos": [
+        "/uploads/photo-1788020130808-209341.jpg"
+      ]
     }
   ],
   "purchases": [
@@ -818,6 +845,14 @@
       "note": "Order #14 - Customer B",
       "refId": "ORD-mtel0k0e-9u9hg",
       "createdAt": "2026-08-29T16:15:22.191Z"
+    },
+    {
+      "id": "LMTEL0QR9",
+      "type": "order",
+      "amount": 120,
+      "note": "Order #15 - Cust C",
+      "refId": "ORD-mtel0qr9-j4h9a",
+      "createdAt": "2026-08-29T16:15:30.933Z"
     }
   ],
   "staff": [
@@ -993,6 +1028,15 @@
       "assigneeId": null,
       "read": false,
       "createdAt": "2026-08-29T16:15:22.191Z"
+    },
+    {
+      "id": "NMTEL0QR92ju",
+      "type": "order",
+      "message": "New order #15 from Cust C. 1 item(s), 120 THB. Start preparing!",
+      "refId": "ORD-mtel0qr9-j4h9a",
+      "assigneeId": null,
+      "read": false,
+      "createdAt": "2026-08-29T16:15:30.933Z"
     }
   ]
 }
