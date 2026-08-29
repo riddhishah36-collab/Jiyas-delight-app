@@ -17,7 +17,7 @@
       "description": "Classic red velvet with cream cheese frosting.",
       "price": 720,
       "unit": "whole",
-      "stock": 8,
+      "stock": 6,
       "active": true
     },
     {
@@ -106,8 +106,8 @@
       "id": "inv-flour",
       "name": "Flour",
       "unit": "kg",
-      "qty": 50,
-      "costPerUnit": 40
+      "qty": 100,
+      "costPerUnit": 38
     },
     {
       "id": "inv-butter",
@@ -127,7 +127,7 @@
       "id": "inv-eggs",
       "name": "Eggs",
       "unit": "dozen",
-      "qty": 40,
+      "qty": 35,
       "costPerUnit": 95
     },
     {
@@ -197,9 +197,77 @@
       "paymentMethod": "cash",
       "status": "pending",
       "createdAt": "2026-08-27T16:47:38.057Z"
+    },
+    {
+      "id": "ORD-mtekg7kq-iio60",
+      "number": 3,
+      "customer": {
+        "name": "Anna",
+        "phone": "089-999-8888",
+        "address": "Sukhumvit 24, Bangkok"
+      },
+      "items": [
+        {
+          "productId": "p-cake-redvelvet",
+          "name": "Red Velvet Cake",
+          "qty": 2,
+          "unitPrice": 720
+        }
+      ],
+      "subtotal": 1440,
+      "deliveryFee": 50,
+      "total": 1490,
+      "paymentMethod": "promptpay",
+      "status": "pending",
+      "createdAt": "2026-08-29T15:59:32.954Z"
+    },
+    {
+      "id": "ORD-mtekg8bj-jo99o",
+      "number": 4,
+      "customer": {
+        "name": "Mana",
+        "phone": "081-555-0000",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "custom-cake",
+          "name": "Custom Cake (large) - Pandan",
+          "qty": 1,
+          "unitPrice": 1400,
+          "detail": "Message: Happy Birthday Ploy"
+        }
+      ],
+      "subtotal": 1400,
+      "deliveryFee": 0,
+      "total": 1400,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T15:59:33.919Z"
     }
   ],
-  "purchases": [],
+  "purchases": [
+    {
+      "id": "PUR-mtekgcsc-axc97",
+      "itemId": "inv-flour",
+      "itemName": "Flour",
+      "qty": 50,
+      "costPerUnit": 38,
+      "totalCost": 1900,
+      "type": "buy",
+      "createdAt": "2026-08-29T15:59:39.708Z"
+    },
+    {
+      "id": "PUR-mtekgctf-9s2v5",
+      "itemId": "inv-eggs",
+      "itemName": "Eggs",
+      "qty": -5,
+      "costPerUnit": 95,
+      "totalCost": -475,
+      "type": "sell",
+      "createdAt": "2026-08-29T15:59:39.747Z"
+    }
+  ],
   "ledger": [
     {
       "id": "LMTBRA9PQ",
@@ -216,6 +284,38 @@
       "note": "Order #2 - Test",
       "refId": "ORD-mtbraceh-yv3hl",
       "createdAt": "2026-08-27T16:47:38.057Z"
+    },
+    {
+      "id": "LMTEKG7KQ",
+      "type": "order",
+      "amount": 1490,
+      "note": "Order #3 - Anna",
+      "refId": "ORD-mtekg7kq-iio60",
+      "createdAt": "2026-08-29T15:59:32.954Z"
+    },
+    {
+      "id": "LMTEKG8BJ",
+      "type": "order",
+      "amount": 1400,
+      "note": "Order #4 - Mana",
+      "refId": "ORD-mtekg8bj-jo99o",
+      "createdAt": "2026-08-29T15:59:33.919Z"
+    },
+    {
+      "id": "LMTEKGCSC",
+      "type": "purchase",
+      "amount": 1900,
+      "note": "Bought Flour",
+      "refId": "PUR-mtekgcsc-axc97",
+      "createdAt": "2026-08-29T15:59:39.708Z"
+    },
+    {
+      "id": "LMTEKGCTF",
+      "type": "sale",
+      "amount": 475,
+      "note": "Sold Eggs",
+      "refId": "PUR-mtekgctf-9s2v5",
+      "createdAt": "2026-08-29T15:59:39.747Z"
     }
   ]
 }
