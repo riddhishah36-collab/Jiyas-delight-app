@@ -47,7 +47,7 @@
       "description": "Slow-fermented, crusty artisan sourdough.",
       "price": 120,
       "unit": "loaf",
-      "stock": 15,
+      "stock": 14,
       "active": true
     },
     {
@@ -498,6 +498,30 @@
       "photos": [
         "/uploads/photo-1788020096327-393761.jpg"
       ]
+    },
+    {
+      "id": "ORD-mtel0k0e-9u9hg",
+      "number": 14,
+      "customer": {
+        "name": "Customer B",
+        "phone": "089-555-4444",
+        "address": ""
+      },
+      "items": [
+        {
+          "productId": "p-bread-sourdough",
+          "name": "Sourdough Loaf",
+          "qty": 1,
+          "unitPrice": 120
+        }
+      ],
+      "subtotal": 120,
+      "deliveryFee": 0,
+      "total": 120,
+      "paymentMethod": "cash",
+      "status": "pending",
+      "createdAt": "2026-08-29T16:15:22.191Z",
+      "assigneeId": "st-malee"
     }
   ],
   "purchases": [
@@ -786,6 +810,14 @@
       "note": "Order #13 - Customer A",
       "refId": "ORD-mtel004o-6kyl5",
       "createdAt": "2026-08-29T16:14:56.424Z"
+    },
+    {
+      "id": "LMTEL0K0F",
+      "type": "order",
+      "amount": 120,
+      "note": "Order #14 - Customer B",
+      "refId": "ORD-mtel0k0e-9u9hg",
+      "createdAt": "2026-08-29T16:15:22.191Z"
     }
   ],
   "staff": [
@@ -952,6 +984,15 @@
       "assigneeId": null,
       "read": false,
       "createdAt": "2026-08-29T16:14:56.424Z"
+    },
+    {
+      "id": "NMTEL0K0Fd8x",
+      "type": "order",
+      "message": "New order #14 from Customer B. 1 item(s), 120 THB. Start preparing!",
+      "refId": "ORD-mtel0k0e-9u9hg",
+      "assigneeId": null,
+      "read": false,
+      "createdAt": "2026-08-29T16:15:22.191Z"
     }
   ]
 }
